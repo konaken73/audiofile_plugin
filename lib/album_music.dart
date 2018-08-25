@@ -13,7 +13,7 @@ typedef void ErrorHandler(String message);
 
 class AlbumFinder {
 
-  static const MethodChannel _channel = const MethodChannel('music_finder');
+  static const MethodChannel _channel = const MethodChannel('audiofile_plugin');
 
   TimeChangeHandler durationHandler;
   TimeChangeHandler positionHandler;

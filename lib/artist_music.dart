@@ -10,7 +10,7 @@ typedef void ErrorHandler(String message);
 
 class ArtistFinder {
 
-  static const MethodChannel _channel = const MethodChannel('music_finder');
+  static const MethodChannel _channel = const MethodChannel('audiofile_plugin');
   TimeChangeHandler durationHandler;
   TimeChangeHandler positionHandler;
   VoidCallback startHandler;
