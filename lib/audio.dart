@@ -6,7 +6,7 @@ import 'audio_visualizer.dart';
 class Audio {
 
   static const MethodChannel _visualizerChannel =
-  const MethodChannel('audio_visualizer');
+  const MethodChannel('soundvisualization');
 
 
 

@@ -71,11 +71,11 @@ public class AudiofilePlugin implements MethodCallHandler, PluginRegistry.Reques
   String url;
   int newSong;
 
-  private AudioVisualizer visualizer = new AudioVisualizer();
+  //private AudioVisualizer visualizer = new AudioVisualizer();
 
 
 
-  private static final Pattern VISUALIZER_METHOD_NAME_MATCH = Pattern.compile("");
+ // private static final Pattern VISUALIZER_METHOD_NAME_MATCH = Pattern.compile("");
 
   private static MethodChannel visualizerChannel;
 
@@ -91,7 +91,7 @@ public class AudiofilePlugin implements MethodCallHandler, PluginRegistry.Reques
     registrar.addRequestPermissionsResultListener(instance);
     channel.setMethodCallHandler(instance);
 
-    visualizerChannel = new MethodChannel(registrar.messenger(), "fluttery_audio_visualizer");
+    visualizerChannel = new MethodChannel(registrar.messenger(), "soundvisualization");
     visualizerChannel.setMethodCallHandler(new AudioVisualizerPlugin());
 
   }
@@ -475,7 +475,7 @@ public class AudiofilePlugin implements MethodCallHandler, PluginRegistry.Reques
     ArrayList<Short> tab1 = new ArrayList<Short>();
     ArrayList<Integer> tab2 = new ArrayList<Integer>();
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-      equalizer = new Equalizer(0, MusicFinderPlugin.playerId);
+      equalizer = new Equalizer(0, AudiofilePlugin.playerId);
 
       equalizer.setEnabled(true);
 
@@ -820,7 +820,7 @@ public class AudiofilePlugin implements MethodCallHandler, PluginRegistry.Reques
       Log.d("MEDIALIST PLAY MUSIC 1:", String.valueOf(currentSong)+trackUri);
 
       mediaPlayer.reset();
-      Log.d("PLAY MUSIC", String.valueOf(MusicFinderPlugin.playerId));
+      Log.d("PLAY MUSIC", String.valueOf(AudiofilePlugin.playerId));
       //  mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
       try {
 

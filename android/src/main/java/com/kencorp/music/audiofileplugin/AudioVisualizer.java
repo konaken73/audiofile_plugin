@@ -52,7 +52,7 @@ public class AudioVisualizer {
     {
         ArrayList<Short> tab = new ArrayList<Short>();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
-            equalizer = new Equalizer(0, MusicFinderPlugin.playerId);
+            equalizer = new Equalizer(0, AudiofilePlugin.playerId);
 
             equalizer.setEnabled(true);
 

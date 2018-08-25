@@ -2,7 +2,7 @@ name: audiofile_plugin
 description: Flutter plugin for reading local files.
 author: ze ondoua kona kenneth <konaken73@gmail.com>
 homepage: https://github.com/konaken73/audiofile_plugin
-version: 0.0.1
+version: 0.0.2
 
 dependencies:
   flutter:
